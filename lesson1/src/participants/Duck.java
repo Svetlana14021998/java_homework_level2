@@ -1,11 +1,11 @@
 package participants;
 
-public class Duck extends Animal implements Swimable {
+public class Duck extends Animal implements Swimable, Runable, Jumpable {
 
     private int maxSwimDistance;
 
     public Duck(String name, Color color) {
-        super("Duck", name, color,100, 50);
+        super("Duck", name, color, 100, 50);
         maxSwimDistance = TYPICAL_SWIM_DISTANCE * 10;
     }
 

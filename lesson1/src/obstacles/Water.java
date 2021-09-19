@@ -2,9 +2,11 @@ package obstacles;
 
 
 import participants.Animal;
+import participants.Participant;
 import participants.Swimable;
 
-public  class Water extends Obstacle {
+
+public class Water extends Obstacle {
     private int length;
 
     public Water(int length) {
@@ -12,12 +14,11 @@ public  class Water extends Obstacle {
     }
 
     @Override
-    public void doIt(Animal a) {
-        if ( a instanceof Swimable){
-            ((Swimable)a).swim(length);
-        }
-        else{
-            System.out.println(a.getColor().getEnglishColorName() + " " + a.getType() + " " + a.getName() + " - can't swim");
+    public void doIt(Participant a) {
+        if (a instanceof Swimable) {
+            ((Swimable) a).swim(length);
+        } else {
+            System.out.println(a.toString() + " - can't swim");
             a.setOnDistance(false);
         }
 

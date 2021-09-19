@@ -1,6 +1,6 @@
 package participants;
 
-public class Dog extends Animal implements Swimable{
+public class Dog extends Animal implements Swimable,Runable,Jumpable{
 
     private int maxSwimDistance;
 
