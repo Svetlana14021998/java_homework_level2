@@ -1,6 +1,6 @@
 package participants;
 
-public abstract class Animal {
+public abstract class Animal implements Participant {
     String type;
     String name;
     Color color;
@@ -41,23 +41,32 @@ public abstract class Animal {
 
     public void run(int distance) {
         if (distance <= maxRunDistance) {
-            System.out.println(color.getEnglishColorName() + " " + type + " " + name + " - Run OK");
+            System.out.println(this.toString() + " - Run OK");
         } else {
-            System.out.println(color.getEnglishColorName() + " " + type + " " + name + " - Run FAILED");
+            System.out.println(this.toString() + " - Run FAILED");
             onDistance = false;
         }
     }
 
     public void jump(int height) {
         if (height <= maxJumpHeight) {
-            System.out.println(color.getEnglishColorName() + " " + type + " " + name + " - Jump OK");
+            System.out.println(this.toString() + " - Jump OK");
         } else {
-            System.out.println(color.getEnglishColorName() + " " + type + " " + name + " - Jump FAILED");
+            System.out.println(this.toString() + " - Jump FAILED");
             onDistance = false;
         }
     }
 
     public void info() {
-        System.out.println(color.getEnglishColorName() + " " + type + " " + name + ": " + onDistance);
+        System.out.println(this.toString() + onDistance);
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", color=" + color +
+                '}';
     }
 }
