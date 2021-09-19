@@ -1,3 +1,3 @@
-1.Добавить роботов в качестве возможных участников команды. Класс роботов не наследуются от класса Animals;
-2.Добавить класс Team, который будет содержать: название команды, массив из 4-х участников (т.е. в конструкторе можно сразу всех участников указывать), метод для вывода информации о членах команды прошедших дистанцию, метод вывода информации обо всех членах команды;
-3. Добавить класс Course (полоса препятствий), в котором будут находиться: массив препятствий, метод который будет просить команду пройти всю полосу
+1.Add robots as possible team members. Class Robot are not extending from class Animal.
+2.Add class Team. Team will be include: team name, aaray members, method for print information about members. 
+3.Add class Course (course of obstacles) witch will be contain: array of obstacles, method which will ask the team to go through the course of obstacles
